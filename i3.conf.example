@@ -1,0 +1,13 @@
+# Paste into ~/.config/i3/config, then reload with $mod+Shift+r
+set $spot ~/workspace/github.com/jacobduck99/spotify-keys/spot
+set $mode_spotify spotify: [space] play/pause  [n]ext  [p]rev  [l]ike  [a]dd to coding
+
+mode "$mode_spotify" {
+    bindsym space exec --no-startup-id $spot toggle; mode "default"
+    bindsym n     exec --no-startup-id $spot next;   mode "default"
+    bindsym p     exec --no-startup-id $spot prev;   mode "default"
+    bindsym l     exec --no-startup-id $spot like;   mode "default"
+    bindsym a     exec --no-startup-id $spot add;    mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+m mode "$mode_spotify"

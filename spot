@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Entry point for i3: bindsym ... exec --no-startup-id /path/to/spot <cmd>
+DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+exec "$DIR/.venv/bin/python" -m spotify_keys.cli "$@"

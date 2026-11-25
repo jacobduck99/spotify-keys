@@ -1,0 +1,14 @@
+{
+  "name": "spotify-keys",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "auth": "bun run src/auth.ts",
+    "spot": "bun run src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.5",
+    "typescript": "^7.0.2"
+  }
+}
